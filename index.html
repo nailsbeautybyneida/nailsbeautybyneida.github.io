@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Nails & Beauty by Neida - Manicure, pedicure, semipermanente, gel e nail art a Lissone.">
+
+    <meta name="theme-color" content="#63272d">
+
+    <title>Nails & Beauty by Neida | Lissone</title>
+
+
+    <!-- =====================================================
+         FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           COLORI
+        ===================================================== */
+
+        :root {
+
+            --pink-light: #fff3f6;
+            --pink: #f9dce5;
+            --pink-dark: #efc3d1;
+
+            --burgundy: #63272d;
+            --burgundy-dark: #4b1d23;
+
+            --gold: #b28a3c;
+            --gold-light: #d6b66c;
+
+            --text: #4a282d;
+
+            --white: #ffffff;
+
+            --shadow:
+                0 20px 50px rgba(99,39,45,0.12);
+
+            --transition:
+                all 0.35s ease;
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Montserrat", sans-serif;
+
+            background: var(--pink-light);
+
+            color: var(--text);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        a {
+            color: inherit;
+        }
+
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background:
+                rgba(255,243,246,0.92);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom:
+                1px solid
+                rgba(99,39,45,0.10);
+        }
+
+
+        .navbar {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 14px 25px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .logo {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 30px;
+
+            font-weight: 700;
+
+            line-height: 0.8;
+
+            color: var(--burgundy);
+
+            text-decoration: none;
+        }
+
+
+        .logo span {
+            color: var(--gold);
+        }
+
+
+        .logo small {
+
+            display: block;
+
+            margin-top: 9px;
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 9px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: var(--gold);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            list-style: none;
+
+            gap: 30px;
+
+            align-items: center;
+        }
+
+
+        .nav-links a {
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            color: var(--burgundy);
+
+            position: relative;
+
+            padding: 8px 0;
+        }
+
+
+        .nav-links a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: 0;
+
+            width: 0;
+
+            height: 2px;
+
+            background: var(--gold);
+
+            transition: var(--transition);
+        }
+
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        .nav-book {
+
+            padding:
+                10px 19px !important;
+
+            border-radius: 30px;
+
+            background: var(--burgundy);
+
+            color: white !important;
+        }
+
+
+        .nav-book::after {
+            display: none;
+        }
+
+
+        .nav-book:hover {
+            background: var(--gold);
+        }
+
+
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
+
+        .menu-toggle {
+
+            display: none;
+
+            width: 44px;
+
+            height: 44px;
+
+            border: none;
+
+            background: transparent;
+
+            cursor: pointer;
+
+            position: relative;
+
+            z-index: 1100;
+        }
+
+
+        .menu-toggle span {
+
+            display: block;
+
+            width: 25px;
+
+            height: 2px;
+
+            margin: 5px auto;
+
+            background: var(--burgundy);
+
+            transition: var(--transition);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            padding:
+                150px 25px 100px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(255,255,255,.85),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 10% 90%,
+                    rgba(239,195,209,.45),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f7d9e2,
+                    #fff3f6 60%,
+                    #f9dce5
+                );
+        }
+
+
+        .flower {
+
+            position: absolute;
+
+            color: rgba(255,255,255,.55);
+
+            font-size: 220px;
+
+            pointer-events: none;
+
+            user-select: none;
+        }
+
+
+        .flower.one {
+
+            top: -100px;
+
+            left: -70px;
+
+            transform: rotate(-20deg);
+        }
+
+
+        .flower.two {
+
+            bottom: -120px;
+
+            right: -70px;
+
+            transform: rotate(25deg);
+
+            font-size: 280px;
+        }
+
+
+        .hero-container {
+
+            max-width: 1150px;
+
+            width: 100%;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 80px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .eyebrow {
+
+            color: var(--gold);
+
+            text-transform: uppercase;
+
+            letter-spacing: 4px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(60px, 8vw, 94px);
+
+            line-height: .82;
+
+            color: var(--burgundy);
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+
+        .hero-script {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-style: italic;
+
+            font-size: 32px;
+
+            color: var(--burgundy);
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero-text {
+
+            max-width: 540px;
+
+            color: #70494f;
+
+            font-size: 15px;
+
+            margin-bottom: 28px;
+        }
+
+
+        .hero-contact {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+
+            margin-bottom: 30px;
+
+            font-size: 14px;
+        }
+
+
+        .hero-contact a {
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            color: var(--burgundy);
+        }
+
+
+        .buttons {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding:
+                14px 24px;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: var(--transition);
+        }
+
+
+        .btn-primary {
+
+            background: var(--burgundy);
+
+            color: white;
+
+            box-shadow:
+                0 10px 25px
+                rgba(99,39,45,.18);
+        }
+
+
+        .btn-primary:hover {
+
+            background: var(--gold);
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        .btn-outline {
+
+            border:
+                1px solid var(--burgundy);
+
+            color: var(--burgundy);
+
+            background:
+                rgba(255,255,255,.25);
+        }
+
+
+        .btn-outline:hover {
+
+            background: var(--burgundy);
+
+            color: white;
+        }
+
+
+        /* =====================================================
+           HERO FOTO
+        ===================================================== */
+
+        .hero-image {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .hero-frame {
+
+            width: min(450px, 90vw);
+
+            position: relative;
+        }
+
+
+        .hero-frame::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: -15px;
+
+            border:
+                1px solid
+                rgba(178,138,60,.55);
+
+            border-radius: 50%;
+
+            transform: rotate(-8deg);
+        }
+
+
+        .hero-frame::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: -28px;
+
+            border:
+                1px solid
+                rgba(178,138,60,.22);
+
+            border-radius: 50%;
+
+            transform: rotate(7deg);
+        }
+
+
+        .hero-frame img {
+
+            width: 100%;
+
+            aspect-ratio: 1;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border:
+                10px solid
+                rgba(255,255,255,.82);
+
+            box-shadow: var(--shadow);
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =====================================================
+           SEZIONI
+        ===================================================== */
+
+        .section {
+
+            padding: 100px 25px;
+        }
+
+
+        .container {
+
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+
+        .section-heading .mini {
+
+            text-transform: uppercase;
+
+            color: var(--gold);
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section-heading h2 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(45px, 6vw, 65px);
+
+            line-height: 1;
+
+            color: var(--burgundy);
+        }
+
+
+        .section-heading h2 span {
+            color: var(--gold);
+        }
+
+
+        .section-heading p {
+
+            max-width: 620px;
+
+            margin:
+                15px auto 0;
+
+            color: #81565c;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           SERVIZI
+        ===================================================== */
+
+        .services {
+
+            background: white;
+        }
+
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .service {
+
+            text-align: center;
+
+            padding: 38px 25px;
+
+            border-radius: 22px;
+
+            border:
+                1px solid #efd8df;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #fffafd,
+                    #fff1f5
+                );
+
+            transition: var(--transition);
+        }
+
+
+        .service:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .service-icon {
+
+            font-size: 38px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .service h3 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 29px;
+
+            color: var(--burgundy);
+
+            margin-bottom: 10px;
+        }
+
+
+        .service p {
+
+            font-size: 13px;
+
+            color: #765158;
+        }
+
+
+        /* =====================================================
+           WHY
+        ===================================================== */
+
+        .why {
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 15%,
+                    white,
+                    transparent 28%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f8dce5,
+                    #fff2f6
+                );
+        }
+
+
+        .why-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 25px;
+        }
+
+
+        .why-card {
+
+            background:
+                rgba(255,255,255,.70);
+
+            border:
+                1px solid
+                rgba(255,255,255,.85);
+
+            border-radius: 22px;
+
+            padding: 38px 30px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(99,39,45,.06);
+        }
+
+
+        .why-card h3 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 28px;
+
+            color: var(--burgundy);
+
+            margin-bottom: 12px;
+        }
+
+
+        .why-card p {
+
+            font-size: 13px;
+
+            color: #704b51;
+        }
+
+
+        /* =====================================================
+           LISTINO
+        ===================================================== */
+
+        .prices {
+
+            background: white;
+        }
+
+
+        .price-box {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 45px;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #fffafd,
+                    #fff1f5
+                );
+
+            border:
+                1px solid #efd8df;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .category {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            color: var(--burgundy);
+
+            font-size: 31px;
+
+            margin-top: 25px;
+
+            padding-bottom: 7px;
+
+            border-bottom:
+                1px solid
+                rgba(178,138,60,.35);
+        }
+
+
+        .category:first-child {
+            margin-top: 0;
+        }
+
+
+        .price-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            padding: 13px 0;
+
+            border-bottom:
+                1px dashed #e4c9d1;
+
+            font-size: 14px;
+        }
+
+
+        .price {
+
+            color: var(--gold);
+
+            font-weight: 800;
+
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           GALLERIA
+        ===================================================== */
+
+        .gallery {
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #fff1f5,
+                    #f8dce5
+                );
+        }
+
+
+        .gallery-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+        }
+
+
+        .gallery-card {
+
+            height: 330px;
+
+            overflow: hidden;
+
+            border-radius: 22px;
+
+            position: relative;
+
+            cursor: pointer;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f1d1dc,
+                    #fff3f6
+                );
+
+            box-shadow:
+                0 10px 30px
+                rgba(99,39,45,.08);
+        }
+
+
+        .gallery-card img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .6s ease;
+        }
+
+
+        .gallery-card:hover img {
+
+            transform:
+                scale(1.08);
+        }
+
+
+        .gallery-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            padding: 20px;
+
+            background:
+                linear-gradient(
+                    transparent 55%,
+                    rgba(60,20,25,.60)
+                );
+
+            opacity: 0;
+
+            transition: var(--transition);
+        }
+
+
+        .gallery-card:hover
+        .gallery-overlay {
+
+            opacity: 1;
+        }
+
+
+        .gallery-overlay span {
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           LIGHTBOX
+        ===================================================== */
+
+        .lightbox {
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(45,15,20,.94);
+
+            z-index: 3000;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+        }
+
+
+        .lightbox.active {
+            display: flex;
+        }
+
+
+        .lightbox img {
+
+            max-width: 90vw;
+
+            max-height: 85vh;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 20px 70px rgba(0,0,0,.4);
+        }
+
+
+        .close-lightbox {
+
+            position: absolute;
+
+            top: 20px;
+
+            right: 25px;
+
+            width: 45px;
+
+            height: 45px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.12);
+
+            color: white;
+
+            font-size: 28px;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+
+            padding:
+                110px 25px;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(80,27,35,.94),
+                    rgba(80,27,35,.94)
+                );
+        }
+
+
+        .cta h2 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(45px,6vw,70px);
+
+            line-height: .95;
+
+            margin-bottom: 18px;
+        }
+
+
+        .cta p {
+
+            color: #f8e3e8;
+
+            margin-bottom: 30px;
+        }
+
+
+        .cta .btn-primary {
+
+            background: var(--gold);
+        }
+
+
+        .cta .btn-primary:hover {
+
+            background:
+                var(--gold-light);
+        }
+
+
+        /* =====================================================
+           CONTATTI
+        ===================================================== */
+
+        .contact {
+
+            background: white;
+        }
+
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px;
+        }
+
+
+        .contact-card {
+
+            padding: 40px;
+
+            border-radius: 22px;
+
+            background: var(--pink-light);
+
+            border:
+                1px solid #efd8df;
+        }
+
+
+        .contact-card h3 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            color: var(--burgundy);
+
+            font-size: 32px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .contact-card p {
+
+            font-size: 14px;
+
+            color: #704b51;
+
+            margin: 8px 0;
+        }
+
+
+        .contact-card a {
+
+            color: var(--burgundy);
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background:
+                var(--burgundy-dark);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 45px 20px;
+        }
+
+
+        footer h3 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 32px;
+        }
+
+
+        footer h3 span {
+            color: var(--gold-light);
+        }
+
+
+        footer p {
+
+            color: #f4dce2;
+
+            font-size: 13px;
+
+            margin-top: 4px;
+        }
+
+
+        footer a {
+            text-decoration: none;
+        }
+
+
+        .copyright {
+
+            margin-top: 25px;
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.12);
+
+            font-size: 10px;
+
+            opacity: .6;
+        }
+
+
+        /* =====================================================
+           WHATSAPP
+        ===================================================== */
+
+        .whatsapp {
+
+            position: fixed;
+
+            right: 20px;
+
+            bottom: 20px;
+
+            width: 60px;
+
+            height: 60px;
+
+            border-radius: 50%;
+
+            background: #25D366;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-decoration: none;
+
+            font-size: 27px;
+
+            z-index: 2500;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,.22);
+
+            transition: var(--transition);
+        }
+
+
+        .whatsapp:hover {
+
+            transform:
+                scale(1.1);
+        }
+
+
+        /* =====================================================
+           ANIMAZIONE
+        ===================================================== */
+
+        .fade-up {
+
+            animation:
+                fadeUp .9s ease both;
+        }
+
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+
+                position: fixed;
+
+                top: 0;
+
+                right: -100%;
+
+                width: 280px;
+
+                height: 100vh;
+
+                background:
+                    #fff3f6;
+
+                flex-direction: column;
+
+                justify-content: center;
+
+                gap: 25px;
+
+                box-shadow:
+                    -10px 0 40px
+                    rgba(99,39,45,.12);
+
+                transition:
+                    right .35s ease;
+            }
+
+
+            .nav-links.open {
+                right: 0;
+            }
+
+
+            .menu-toggle {
+                display: block;
+            }
+
+
+            .hero-container {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+                gap: 65px;
+            }
+
+
+            .hero-text {
+
+                margin: auto;
+            }
+
+
+            .hero-contact,
+            .buttons {
+
+                align-items: center;
+
+                justify-content: center;
+            }
+
+
+            .hero-frame {
+
+                width: 370px;
+            }
+
+
+            .services-grid,
+            .why-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+
+            .gallery-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 12px 18px;
+            }
+
+
+            .logo {
+                font-size: 26px;
+            }
+
+
+            .hero {
+
+                padding:
+                    130px 18px 75px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 58px;
+            }
+
+
+            .hero-script {
+                font-size: 27px;
+            }
+
+
+            .hero-frame {
+                width: 310px;
+            }
+
+
+            .section {
+                padding: 75px 18px;
+            }
+
+
+            .services-grid,
+            .why-grid,
+            .gallery-grid,
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .gallery-card {
+                height: 350px;
+            }
+
+
+            .price-box {
+                padding: 28px 18px;
+            }
+
+
+            .price-row {
+                font-size: 12px;
+            }
+
+
+            .category {
+                font-size: 28px;
+            }
+
+
+            .contact-card {
+                padding: 30px 25px;
+            }
+
+
+            .whatsapp {
+
+                width: 55px;
+
+                height: 55px;
+
+                right: 15px;
+
+                bottom: 15px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+
+        <a
+            href="#home"
+            class="logo">
+
+            Nails <span>&</span> Beauty
+
+            <small>
+                by Neida
+            </small>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Apri menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <ul
+            class="nav-links"
+            id="navLinks">
+
+
+            <li>
+                <a href="#servizi">
+                    Servizi
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#prezzi">
+                    Prezzi
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#galleria">
+                    Galleria
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#contatti">
+                    Contatti
+                </a>
+            </li>
+
+
+            <li>
+                <a
+                    class="nav-book"
+                    href="https://wa.me/393272487455"
+                    target="_blank">
+
+                    Prenota
+
+                </a>
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main id="home">
+
+
+    <section class="hero">
+
+
+        <div class="flower one">
+            ✿
+        </div>
+
+
+        <div class="flower two">
+            ✿
+        </div>
+
+
+        <div class="hero-container">
+
+
+            <div class="fade-up">
+
+
+                <div class="eyebrow">
+                    Manicure • Pedicure • Beauty
+                </div>
+
+
+                <h1>
+
+                    Nails &<br>
+
+                    <span>Beauty</span><br>
+
+                    by Neida
+
+                </h1>
+
+
+                <div class="hero-script">
+
+                    La mia serenità,<br>
+                    la tua bellezza.
+
+                </div>
+
+
+                <p class="hero-text">
+
+                    Manicure, pedicure, semipermanente,
+                    ricostruzione gel e nail art.
+                    Ogni trattamento viene realizzato
+                    con passione, precisione e cura
+                    dei dettagli.
+
+                </p>
+
+
+                <div class="hero-contact">
+
+                    <div>
+
+                        📞
+
+                        <a href="tel:+393272487455">
+
+                            327 248 7455
+
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        📍 Via Aliprandi 65,
+                        Lissone
+
+                    </div>
+
+                </div>
+
+
+                <div class="buttons">
+
+
+                    <a
+                        class="btn btn-primary"
+                        href="https://wa.me/393272487455"
+                        target="_blank">
+
+                        💬 Prenota su WhatsApp
+
+                    </a>
+
+
+                    <a
+                        class="btn btn-outline"
+                        href="#prezzi">
+
+                        Scopri i prezzi
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="hero-image fade-up">
+
+
+                <div class="hero-frame">
+
+
+                    <!-- FOTO PRINCIPALE
+                         Puoi cambiarla in futuro.
+                         Ad esempio foto1.jpg, foto2.jpg ecc. -->
+
+                    <img
+                        src="immagini/foto5.jpg"
+                        alt="Manicure Nails & Beauty by Neida">
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================================
+         SERVIZI
+    ================================================= -->
+
+    <section
+        class="section services"
+        id="servizi">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <div class="mini">
+                    Beauty treatments
+                </div>
+
+                <h2>
+                    I miei
+                    <span>servizi</span>
+                </h2>
+
+                <p>
+                    Trattamenti pensati per valorizzare
+                    la bellezza delle tue mani e dei tuoi piedi.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <div class="service">
+
+                    <div class="service-icon">
+                        💅
+                    </div>
+
+                    <h3>
+                        Manicure Spa
+                    </h3>
+
+                    <p>
+                        Cura delle mani, forma delle
+                        unghie e trattamento Spa.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <div class="service-icon">
+                        ✨
+                    </div>
+
+                    <h3>
+                        Semipermanente
+                    </h3>
+
+                    <p>
+                        Colore brillante, elegante
+                        e resistente nel tempo.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <div class="service-icon">
+                        💎
+                    </div>
+
+                    <h3>
+                        Gel
+                    </h3>
+
+                    <p>
+                        Ricostruzione, allungamento,
+                        copertura e refil.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <div class="service-icon">
+                        🦶
+                    </div>
+
+                    <h3>
+                        Pedicure
+                    </h3>
+
+                    <p>
+                        Pedicure Spa e trattamenti
+                        dedicati alla bellezza dei piedi.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <div class="service-icon">
+                        🌸
+                    </div>
+
+                    <h3>
+                        Nail Art
+                    </h3>
+
+                    <p>
+                        Dettagli, colori e decorazioni
+                        per rendere unico il tuo look.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <div class="service-icon">
+                        🌷
+                    </div>
+
+                    <h3>
+                        Rimozione
+                    </h3>
+
+                    <p>
+                        Rimozione professionale di
+                        gel e semipermanente.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         PERCHÉ SCEGLIERMI
+    ================================================= -->
+
+    <section
+        class="section why">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <div class="mini">
+                    Nails & Beauty by Neida
+                </div>
+
+                <h2>
+                    Perché
+                    <span>scegliermi</span>
+                </h2>
+
+            </div>
+
+
+            <div class="why-grid">
+
+
+                <div class="why-card">
+
+                    <h3>
+                        🌸 Passione e Accuratezza
+                    </h3>
+
+                    <p>
+                        Ogni trattamento è curato nei
+                        minimi dettagli per offrirti
+                        un risultato preciso, elegante
+                        e personalizzato.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <h3>
+                        🧼 Massima Igiene
+                    </h3>
+
+                    <p>
+                        Strumenti sterilizzati e massima
+                        attenzione alla pulizia durante
+                        ogni trattamento.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <h3>
+                        💎 Prodotti di qualità
+                    </h3>
+
+                    <p>
+                        Prodotti selezionati per ottenere
+                        una tenuta impeccabile e un
+                        risultato duraturo.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         PREZZI
+    ================================================= -->
+
+    <section
+        class="section prices"
+        id="prezzi">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <div class="mini">
+                    Il mio listino
+                </div>
+
+                <h2>
+
+                    Unghie Perfette
+
+                    <br>
+
+                    <span>a Prezzi Piccoli</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="price-box">
+
+
+                <div class="category">
+                    Manicure
+                </div>
+
+
+                <div class="price-row">
+                    <span>
+                        Manicure Spa Senza Smalto
+                    </span>
+
+                    <span class="price">
+                        €10
+                    </span>
+                </div>
+
+
+                <div class="price-row">
+                    <span>
+                        Manicure Spa + Smalto
+                    </span>
+
+                    <span class="price">
+                        €12
+                    </span>
+                </div>
+
+
+                <div class="price-row">
+                    <span>
+                        Manicure Semipermanente
+                    </span>
+
+                    <span class="price">
+                        €20
+                    </span>
+                </div>
+
+
+                <div class="price-row">
+                    <span>
+                        Rimozione Semipermanente
+                    </span>
+
+                    <span class="price">
+                        €5
+                    </span>
+                </div>
+
+
+                <div class="category">
+                    Gel
+                </div>
+
+
+                <div class="price-row">
+                    <span>
+                        Ricostruzione Gel (allungamento)
+                    </span>
+
+                    <span class="price">
+                        €30
+                    </span>
+                </div>
+
+
+                <div class="price-row">
+                    <span>
+                        Copertura in gel su unghia naturale
+                    </span>
+
+                    <span class="price">
+                        €25
+                    </span>
+                </div>
+
+
+                <div class="price-row">
+                    <span>
+                        Refil
+                    </span>
+
+                    <span class="price">
+                        €25
+                    </span>
+                </div>
+
+
+                <div class="price-row">
+                    <span>
+                        Rimozione Gel
+                    </span>
+
+                    <span class="price">
+                        €10
+                    </span>
+                </div>
+
+
+                <div class="category">
+                    Pedicure
+                </div>
+
+
+                <div class="price-row">
+                    <span>
+                        Pedicure Spa
+                    </span>
+
+                    <span class="price">
+                        €20
+                    </span>
+                </div>
+
+
+                <div class="price-row">
+                    <span>
+                        Semipermanente senza Pedicure
+                    </span>
+
+                    <span class="price">
+                        €20
+                    </span>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         GALLERIA - 7 FOTO
+         
+         Nella cartella "immagini" devono esserci:
+
+         foto1.jpg
+         foto2.jpg
+         foto3.jpg
+         foto4.jpg
+         foto5.jpg
+         foto6.jpg
+         foto7.jpg
+
+         Per aggiungere una nuova foto in futuro
+         basta aggiungere un nuovo blocco qui.
+    ================================================= -->
+
+    <section
+        class="section gallery"
+        id="galleria">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <div class="mini">
+                    Portfolio
+                </div>
+
+                <h2>
+                    I miei
+                    <span>lavori</span>
+                </h2>
+
+                <p>
+                    Alcuni dei miei lavori.
+                    Clicca su una foto per visualizzarla
+                    a tutto schermo.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+
+                <!-- FOTO 1 -->
+
+                <div
+                    class="gallery-card"
+                    data-image="immagini/foto1.jpg">
+
+                    <img
+                        src="immagini/foto1.jpg"
+                        alt="Manicure 1">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Manicure
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO 2 -->
+
+                <div
+                    class="gallery-card"
+                    data-image="immagini/foto2.jpg">
+
+                    <img
+                        src="immagini/foto2.jpg"
+                        alt="Manicure 2">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Nail Art
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO 3 -->
+
+                <div
+                    class="gallery-card"
+                    data-image="immagini/foto3.jpg">
+
+                    <img
+                        src="immagini/foto3.jpg"
+                        alt="Manicure 3">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Manicure
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO 4 -->
+
+                <div
+                    class="gallery-card"
+                    data-image="immagini/foto4.jpg">
+
+                    <img
+                        src="immagini/foto4.jpg"
+                        alt="Pedicure">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Pedicure
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO 5 -->
+
+                <div
+                    class="gallery-card"
+                    data-image="immagini/foto5.jpg">
+
+                    <img
+                        src="immagini/foto5.jpg"
+                        alt="French gialla">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            French Nail Art
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO 6 -->
+
+                <div
+                    class="gallery-card"
+                    data-image="immagini/foto6.jpg">
+
+                    <img
+                        src="immagini/foto6.jpg"
+                        alt="Manicure rosa">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Manicure Rosa
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOTO 7 -->
+
+                <div
+                    class="gallery-card"
+                    data-image="immagini/foto7.jpg">
+
+                    <img
+                        src="immagini/foto7.jpg"
+                        alt="Manicure 7">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Manicure
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CTA
+    ================================================= -->
+
+    <section class="cta">
+
+
+        <div class="container">
+
+
+            <h2>
+
+                La mia serenità,
+                <br>
+                la tua bellezza.
+
+            </h2>
+
+
+            <p>
+
+                Concediti un momento tutto per te.
+
+            </p>
+
+
+            <a
+                class="btn btn-primary"
+                href="https://wa.me/393272487455"
+                target="_blank">
+
+                💚 Prenota il tuo appuntamento
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CONTATTI
+    ================================================= -->
+
+    <section
+        class="section contact"
+        id="contatti">
+
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <div class="mini">
+                    Dove trovarmi
+                </div>
+
+                <h2>
+                    <span>Contatti</span>
+                </h2>
+
+                <p>
+                    Per informazioni e prenotazioni
+                    puoi contattarmi direttamente.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        📍 Dove trovarmi
+                    </h3>
+
+
+                    <p>
+
+                        <strong>
+                            Nails & Beauty by Neida
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
+                        Via Aliprandi 65
+                        <br>
+                        Lissone
+
+                    </p>
+
+
+                    <br>
+
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Via+Aliprandi+65+Lissone"
+                        target="_blank">
+
+                        📍 Apri Google Maps →
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>
+                        💬 Prenota
+                    </h3>
+
+
+                    <p>
+
+                        📞
+
+                        <a href="tel:+393272487455">
+
+                            327 248 7455
+
+                        </a>
+
+                    </p>
+
+
+                    <p>
+
+                        💚
+
+                        <a
+                            href="https://wa.me/393272487455"
+                            target="_blank">
+
+                            WhatsApp
+
+                        </a>
+
+                    </p>
+
+
+                    <br>
+
+
+                    <a
+                        class="btn btn-primary"
+                        href="https://wa.me/393272487455"
+                        target="_blank">
+
+                        Prenota appuntamento
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <h3>
+
+        Nails <span>&</span> Beauty by Neida
+
+    </h3>
+
+
+    <p>
+        Manicure • Pedicure • Nail Art
+    </p>
+
+
+    <p>
+        Via Aliprandi 65, Lissone
+    </p>
+
+
+    <p>
+
+        📞
+
+        <a href="tel:+393272487455">
+
+            327 248 7455
+
+        </a>
+
+    </p>
+
+
+    <div class="copyright">
+
+        © 2026 Nails & Beauty by Neida
+
+    </div>
+
+
+</footer>
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/393272487455"
+    target="_blank"
+    aria-label="Scrivi su WhatsApp">
+
+    💬
+
+</a>
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div
+    class="lightbox"
+    id="lightbox">
+
+
+    <button
+        class="close-lightbox"
+        id="closeLightbox"
+        aria-label="Chiudi">
+
+        ×
+
+    </button>
+
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Foto ingrandita">
+
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+    /* =====================================================
+       MENU MOBILE
+    ===================================================== */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navLinks =
+        document.getElementById("navLinks");
+
+
+    menuToggle.addEventListener(
+        "click",
+        function() {
+
+            navLinks.classList.toggle("open");
+
+        }
+    );
+
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    navLinks.classList.remove("open");
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       LIGHTBOX
+    ===================================================== */
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
+
+    const closeLightbox =
+        document.getElementById("closeLightbox");
+
+
+    document
+        .querySelectorAll(".gallery-card")
+        .forEach(function(card) {
+
+            card.addEventListener(
+                "click",
+                function() {
+
+                    const image =
+                        card.querySelector("img");
+
+
+                    if (!image) {
+                        return;
+                    }
+
+
+                    lightboxImage.src =
+                        card.dataset.image;
+
+
+                    lightbox.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* =====================================================
+       CHIUDI LIGHTBOX
+    ===================================================== */
+
+    function chiudiLightbox() {
+
+        lightbox.classList.remove(
+            "active"
+        );
+
+        lightboxImage.src = "";
+
+    }
+
+
+    closeLightbox.addEventListener(
+        "click",
+        chiudiLightbox
+    );
+
+
+    lightbox.addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target === lightbox
+            ) {
+
+                chiudiLightbox();
+
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function(event) {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                chiudiLightbox();
+
+            }
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>
