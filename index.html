@@ -9,7 +9,7 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Nails & Beauty by Neida a Lissone: manicure, pedicure, semipermanente e ricostruzione gel. Scopri servizi, prezzi, galleria e contatti.">
+          content="Nails & Beauty by Neida a Lissone. Servizi dedicati alla cura e alla bellezza delle unghie: manicure, pedicure, semipermanente e gel. Informazioni, prezzi, galleria e contatti.">
 
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#63272d">
@@ -20,13 +20,13 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
     <meta property="og:title" content="Nails & Beauty by Neida | Lissone">
-    <meta property="og:description" content="Manicure, pedicure, semipermanente e ricostruzione gel a Lissone. Scopri servizi, prezzi, galleria e contatti.">
+    <meta property="og:description" content="Servizi dedicati alla cura e alla bellezza delle unghie a Lissone. Scopri informazioni, prezzi, galleria e contatti.">
     <meta property="og:url" content="https://tybyneida.github.io/">
     <meta property="og:site_name" content="Nails & Beauty by Neida">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Nails & Beauty by Neida | Lissone">
-    <meta name="twitter:description" content="Manicure, pedicure, semipermanente e ricostruzione gel a Lissone.">
+    <meta name="twitter:description" content="Servizi dedicati alla cura e alla bellezza delle unghie a Lissone.">
 
     <title>Nails & Beauty by Neida | Manicure e Pedicure a Lissone</title>
 
@@ -603,9 +603,12 @@
 
         .hero-frame {
 
-            width: min(450px, 90vw);
-
+            width: min(450px, calc(100vw - 60px));
+            aspect-ratio: 1 / 1;
             position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+            flex: 0 0 auto;
         }
 
 
@@ -648,8 +651,8 @@
         .hero-frame img {
 
             width: 100%;
-
-            aspect-ratio: 1;
+            height: 100%;
+            aspect-ratio: 1 / 1;
 
             object-fit: cover;
 
@@ -1131,9 +1134,11 @@
 
         .lightbox img {
 
-            max-width: 90vw;
+            width: auto;
+            height: auto;
+            max-width: 96vw;
 
-            max-height: 85vh;
+            max-height: 92vh;
 
             object-fit: contain;
 
@@ -1577,7 +1582,8 @@
 
 
             .hero-frame {
-                width: 310px;
+                width: min(310px, calc(100vw - 50px));
+                aspect-ratio: 1 / 1;
             }
 
 
@@ -1644,6 +1650,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Nails & Beauty by Neida",
+  "description": "Servizi dedicati alla cura e alla bellezza delle unghie. Per informazioni e prenotazioni è possibile contattare direttamente Nails & Beauty by Neida.",
   "url": "https://tybyneida.github.io/",
   "telephone": "+39 327 248 7455",
   "address": {
@@ -2319,12 +2326,7 @@
 
 
             <div class="section-heading">
-
-                <div class="mini">
-                    Portfolio
-                </div>
-
-                <h2>
+<h2>
                     I miei
                     <span>lavori</span>
                 </h2>
@@ -2855,7 +2857,7 @@
 
     /* =====================================================
        LIGHTBOX
-    =====================================================
+    ===================================================== */
 
     const lightbox =
         document.getElementById("lightbox");
@@ -2885,12 +2887,16 @@
 
 
                     lightboxImage.src =
-                        card.dataset.image;
+                        image.currentSrc || image.src;
 
+                    lightboxImage.alt =
+                        image.alt || "Foto ingrandita";
 
                     lightbox.classList.add(
                         "active"
                     );
+
+                    document.body.style.overflow = "hidden";
 
                 }
             );
@@ -2909,6 +2915,11 @@
         );
 
         lightboxImage.src = "";
+
+        // Ripristina lo scorrimento della pagina dopo la chiusura
+        // della lightbox, anche su dispositivi mobili.
+        document.body.style.overflow = "";
+        document.documentElement.style.overflow = "";
 
     }
 
