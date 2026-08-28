@@ -1,0 +1,16 @@
+{
+  "short_name": "Nails Beauty",
+  "name": "Nails Beauty by Neida",
+  "icons": [
+    {
+      "src": "immagini/icon-512-small.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone"
+}
