@@ -2659,13 +2659,9 @@
                         Prenota appuntamento
 
                     </a>
-                    <button
-                        class="btn btn-outline share-button"
-                        type="button"
-                        id="shareSite"
-                        aria-label="Condividi il link del sito">
-                        ↗ Condividi link del sito
-                    </button>
+                <button class="btn btn-outline share-button" onclick="shareWebsite()" type="button" aria-label="Condividi il link del sito">
+    ↗ Condividi link del sito
+</button>
 
                 </div>
 
@@ -2963,7 +2959,7 @@
     <script>
     // 1. Condivisione con URL reale della pagina attiva
     function shareWebsite() {
-        const siteUrl = window.location.href;
+        const siteUrl = window.location.origin + window.location.pathname;
 
         if (navigator.share) {
             navigator.share({
