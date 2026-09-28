@@ -2960,6 +2960,38 @@
 
 
 </script>
+    <script>
+    // 1. Condivisione con URL reale della pagina attiva
+    function shareWebsite() {
+        const siteUrl = window.location.href;
+
+        if (navigator.share) {
+            navigator.share({
+                title: 'Nails & Beauty by Neida',
+                text: 'Servizi dedicati alla cura e alla bellezza delle unghie a Lissone.',
+                url: siteUrl
+            }).catch(err => console.log('Condivisione annullata', err));
+        } else {
+            navigator.clipboard.writeText(siteUrl).then(() => {
+                alert('Link copiato negli appunti!');
+            }).catch(() => {
+                alert('Impossibile copiare il link.');
+            });
+        }
+    }
+
+    // 2. Chiude il menu mobile quando si clicca in qualsiasi punto fuori
+    document.addEventListener('click', (event) => {
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (navLinks && menuToggle && navLinks.classList.contains('open') &&
+            !navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+            navLinks.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+</script>
 
 
 </body>
