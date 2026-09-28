@@ -2958,13 +2958,12 @@
 </script>
     <script>
     // 1. Condivisione con URL reale della pagina attiva
-    function shareWebsite() {
+   function shareWebsite() {
         const siteUrl = window.location.origin + window.location.pathname;
 
         if (navigator.share) {
             navigator.share({
-                title: 'Nails & Beauty by Neida',
-                text: 'Servizi dedicati alla cura e alla bellezza delle unghie a Lissone.',
+                title: 'Nails & Beauty by Neida | Lissone',
                 url: siteUrl
             }).catch(err => console.log('Condivisione annullata', err));
         } else {
